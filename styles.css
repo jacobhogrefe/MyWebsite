@@ -8,7 +8,7 @@
     src: url('fonts/SF-Pro-Display-Semibold.otf') format('truetype');
 }
 
-/* index.html */
+/* nav bar */
 
 nav {
     font-family: 'San Francisco Bold';
@@ -70,51 +70,9 @@ nav {
     filter: invert(27%) sepia(0%) saturate(2161%) hue-rotate(201deg) brightness(98%) contrast(82%);
 }
 
-/* index.html */
+/* general formatting */
 
-quick-me {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.quick-me {
-    margin: 10;
-    padding: 5px;
-    display: flex;
-    justify-content: flex-end;
-
-    text-decoration: none;
-    color: #090909;
-    margin: 10;
-    padding: 10px 20px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    box-shadow: 6px 6px 12px #c5c5c5,
-                -6px -6px 12px #ffffff;
-}
-
-.quick-me img {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 25%;
-    height: auto;
-    border-radius: 0.5em;
-}
-
-.quick-me h1 {
-    font-family: 'San Francisco Bold';
-    font-size: 40px;
-    margin: 10;
-    padding: 5px;
-    font-family: 'San Francisco Bold';
-    font-size: 40px;
-    color: rgba(42, 42, 42, 0.8);
-    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
-    grid-column: span 2 / auto;
-}
-
-.quick-me p {
+p {
     margin: 10;
     padding: 5px;
     font-family: 'San Francisco';
@@ -123,82 +81,25 @@ quick-me {
     text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
 }
 
-/* projects.html */
-
-.github-projects {
-    text-decoration: none;
-    color: #090909;
-    margin: 10;
-    padding: 10px 20px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    box-shadow: 6px 6px 12px #c5c5c5,
-                -6px -6px 12px #ffffff;
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
-        "h h img img"
-        "para para img img"
-        "h2 list img img"
-        "github list img img";
-}
-
-.github-projects img {
-    margin: 10;
-    padding: 5px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 75%;
-    height: auto;
-    border-radius: 0.5em;
-    grid-area: img;
-}
-
-.github-projects h1 {
+h1 {
     margin: 10;
     padding: 5px;
     font-family: 'San Francisco Bold';
     font-size: 40px;
     color: rgba(42, 42, 42, 0.8);
     text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
-    grid-area: h;
 }
 
-.github-projects h2 {
+h2 {
     margin: 10;
     padding: 5px;
     font-family: 'San Francisco Bold';
     font-size: 30px;
     color: rgba(42, 42, 42, 0.8);
     text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
-    grid-area: h2;
 }
 
-.github-projects p {
-    margin: 10;
-    padding: 5px;
-    font-family: 'San Francisco';
-    font-size: 25px;
-    color: rgba(42, 42, 42, 0.8);
-    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
-    grid-area: para;
-}
-
-.github-projects ul {
-    list-style: none;
-    margin: 10;
-    padding: 5px;
-    font-family: 'San Francisco';
-    font-size: 25px;
-    color: rgba(42, 42, 42, 0.8);
-    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
-    grid-area: list;
-}
-
-.github-projects a {
+a {
     text-decoration: none;
     margin: 10;
     padding: 5px;
@@ -206,17 +107,11 @@ quick-me {
     font-size: 25px;
     color: rgba(42, 42, 42, 0.8);
     text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
-    grid-area: github;
 }
 
-/* about.html */
+/* container and columns */
 
-about-me {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.about-me {
+.container {
     text-decoration: none;
     color: #090909;
     margin: 10;
@@ -226,29 +121,23 @@ about-me {
     border: 1px solid #e8e8e8;
     box-shadow: 6px 6px 12px #c5c5c5,
                 -6px -6px 12px #ffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
-.about-me img {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 25%;
-    height: auto;
-    border-radius: 0.5em;
+.column1 {
+    float: left;
+    width: 50%;
 }
 
-.about-me h1 {
-    font-family: 'San Francisco Bold';
-    font-size: 40px;
-    margin: 10;
-    padding: 5px;
-    font-family: 'San Francisco Bold';
-    font-size: 40px;
-    color: rgba(42, 42, 42, 0.8);
-    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
-    grid-column: span 2 / auto;
+.column2 {
+    float: right;
+    width: 50%;
 }
 
-.about-me p {
+.container ul {
+    list-style: none;
     margin: 10;
     padding: 5px;
     font-family: 'San Francisco';
