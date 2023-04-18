@@ -57,20 +57,20 @@ nav {
 }
 
 .nav-links li a img{
+    transition: all .3s;
     position: relative;
     top: 8px;
 }
 
 .nav-links li a:hover img{
-    transition: all .3s;
     filter: invert(71%) sepia(15%) saturate(11%) hue-rotate(315deg) brightness(94%) contrast(85%);
 }
 
 .nav-links li a:active img {
-    transition: all .3s;
     filter: invert(27%) sepia(0%) saturate(2161%) hue-rotate(201deg) brightness(98%) contrast(82%);
 }
 
+/* index.html */
 
 quick-me {
     display: flex;
@@ -82,6 +82,16 @@ quick-me {
     padding: 5px;
     display: flex;
     justify-content: flex-end;
+
+    text-decoration: none;
+    color: #090909;
+    margin: 10;
+    padding: 10px 20px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
 }
 
 .quick-me img {
@@ -95,19 +105,25 @@ quick-me {
 .quick-me h1 {
     font-family: 'San Francisco Bold';
     font-size: 40px;
+    margin: 10;
+    padding: 5px;
+    font-family: 'San Francisco Bold';
+    font-size: 40px;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    grid-column: span 2 / auto;
 }
 
 .quick-me p {
+    margin: 10;
+    padding: 5px;
     font-family: 'San Francisco';
     font-size: 25px;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
 }
 
 /* projects.html */
-
-github-projects {
-    display: flex;
-    justify-content: flex-end;   
-}
 
 .github-projects {
     text-decoration: none;
@@ -117,9 +133,17 @@ github-projects {
     border-radius: 0.5em;
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
-    transition: all .3s;
     box-shadow: 6px 6px 12px #c5c5c5,
                 -6px -6px 12px #ffffff;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "h h img img"
+        "para para img img"
+        "h2 list img img"
+        "github list img img";
 }
 
 .github-projects img {
@@ -127,22 +151,30 @@ github-projects {
     padding: 5px;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 25%;
+    width: 75%;
     height: auto;
     border-radius: 0.5em;
+    grid-area: img;
 }
 
 .github-projects h1 {
-    display: inline;
     margin: 10;
     padding: 5px;
     font-family: 'San Francisco Bold';
     font-size: 40px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    box-shadow: inset 6px 6px 12px #c5c5c5,
-                inset -6px -6px 12px #ffffff;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    grid-area: h;
+}
+
+.github-projects h2 {
+    margin: 10;
+    padding: 5px;
+    font-family: 'San Francisco Bold';
+    font-size: 30px;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    grid-area: h2;
 }
 
 .github-projects p {
@@ -150,31 +182,31 @@ github-projects {
     padding: 5px;
     font-family: 'San Francisco';
     font-size: 25px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    box-shadow: inset 6px 6px 12px #c5c5c5,
-                inset -6px -6px 12px #ffffff;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    grid-area: para;
 }
 
 .github-projects ul {
+    list-style: none;
     margin: 10;
     padding: 5px;
     font-family: 'San Francisco';
     font-size: 25px;
-    border-radius: 0.5em;
-    background: #e8e8e8;
-    border: 1px solid #e8e8e8;
-    box-shadow: inset 6px 6px 12px #c5c5c5,
-                inset -6px -6px 12px #ffffff;
-}
-
-.github-projects ul li {
-    font-size: 25px;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    grid-area: list;
 }
 
 .github-projects a {
+    text-decoration: none;
+    margin: 10;
+    padding: 5px;
+    font-family: 'San Francisco';
     font-size: 25px;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    grid-area: github;
 }
 
 /* about.html */
@@ -182,6 +214,18 @@ github-projects {
 about-me {
     display: flex;
     justify-content: space-evenly;
+}
+
+.about-me {
+    text-decoration: none;
+    color: #090909;
+    margin: 10;
+    padding: 10px 20px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    box-shadow: 6px 6px 12px #c5c5c5,
+                -6px -6px 12px #ffffff;
 }
 
 .about-me img {
@@ -195,9 +239,20 @@ about-me {
 .about-me h1 {
     font-family: 'San Francisco Bold';
     font-size: 40px;
+    margin: 10;
+    padding: 5px;
+    font-family: 'San Francisco Bold';
+    font-size: 40px;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+    grid-column: span 2 / auto;
 }
 
 .about-me p {
+    margin: 10;
+    padding: 5px;
     font-family: 'San Francisco';
     font-size: 25px;
+    color: rgba(42, 42, 42, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
 }
